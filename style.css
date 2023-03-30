@@ -37,6 +37,19 @@
     font-style: normal;
     font-display: swap;
 }
+@font-face {
+    font-family: 'Satoshi';
+    src: url('font/Satoshi-MediumItalic.eot');
+    src: url('font/Satoshi-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('font/Satoshi-MediumItalic.woff2') format('woff2'),
+        url('font/Satoshi-MediumItalic.woff') format('woff'),
+        url('font/Satoshi-MediumItalic.ttf') format('truetype'),
+        url('font/Satoshi-MediumItalic.svg#Satoshi-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
 
 @font-face {
     font-family: 'Satoshi';
@@ -68,8 +81,8 @@ body{
 	padding: 0;
 }
 /* Header css start */
-a.nav-link {
-    text-decoration: none;
+a{
+    text-decoration: none !important;
 }
 nav.navbar {
     background: #F5F9FF;
@@ -77,8 +90,11 @@ nav.navbar {
     padding: 6px 16px;
     margin: 0;
 }
-ul.navbar-nav {
+/*ul.navbar-nav {
     gap: 25px;
+}*/
+.navbar-expand-lg .navbar-nav li{
+    padding:0 5px;
 }
 .navbar-nav li a {
 	font-family: 'Satoshi';
@@ -96,8 +112,9 @@ ul.navbar-nav {
 
 /* customer-details css start */
 .customer-details select,
-.view-categories select{
-	border: 1px solid #BDC2CC;
+.view-categories select,
+.location select{
+	border: 1px solid #BDC2CC !important;
 	border-radius: 50px;
 	padding: 20px 38px;
 	color: #162955;
@@ -133,7 +150,7 @@ ul.navbar-nav {
     background: #FFFFFF;
     box-shadow: 0px 0px 60px rgba(22, 41, 85, 0.08);
     border-radius: 25px;
-    border: 0px solid transparent;
+    border: 0;
 }
 .repair-cost-section .card-body h5 {
     font-family: 'Satoshi';
@@ -166,17 +183,41 @@ ul.navbar-nav {
     border-radius: 25px;
     padding-bottom: 30px;
 }
-.tabbing-section li.nav-item .seprate {
+.tabbing-section ul#myTab li.nav-item {
+    padding: 0 75px;
+}
+.tabbing-section ul#myTab li.nav-item:first-child,
+div#Recent ul#myTab li.nav-item:first-child{
+    padding-left: 0;
+}
+div#Recent ul#myTab li.nav-item{
+    padding: 0 30px;
+}
+/*.tabbing-section li.nav-item .seprate {
+    position: relative;
+    padding-right: 60px;
+}
+.tabbing-section li.nav-item:nth-child(2) {
+    padding-left: 60px;
+}*/
+.tabbing-section li.nav-item .sub-contant:nth-child(2) {
+	padding-left: 10px;
+}
+.tabbing-section li.nav-item{
     position: relative;
 }
-.tabbing-section li.nav-item .seprate:after {
+.tabbing-section li.nav-item:after {
     content: '';
     position: absolute;
-    top: 15px;
+    top: 50%;
+    margin-top: -12.5px;
     right: 0;
     bottom: 0;
     border: 1px solid #818898;
     height: 25px;
+}
+.tabbing-section li.nav-item:last-child:after{
+    display: none;
 }
 .tabbing-section .main-tab-content {
     background: #F5F9FF;
@@ -188,6 +229,11 @@ ul.navbar-nav {
 }
 .sub-main-contant{
 	padding: 24px 0;
+    width: calc(100% - 57px);
+}
+section.work-requests-section{
+    width: calc(100% - 30px);
+    margin: 0 auto 40px;
 }
 .tabbing-section .nav-item .sub-contant.active,
 .tabbing-section .nav-item .sub-contant {
@@ -204,6 +250,7 @@ ul.navbar-nav {
     font-size: 28px;
     line-height: 32px;
     color: #818898;
+    padding: 0;
 }
 .sub-contant.nav-link{
 	font-size: 18px;
@@ -229,8 +276,8 @@ ul.navbar-nav {
 .message-contant {
     overflow-y: scroll;
     height: 100%;
-    padding: 0 57px 0 0;
     max-height: 300px;
+    padding-right: 57px;
 }
 .message-part {
     border-bottom: 1px solid #D7D9DE;
@@ -257,6 +304,7 @@ ul.navbar-nav {
 .admin-image p {
     font-weight: 500;
     text-align: center;
+    margin: 5px 0 0;
 }
 .message-date p{
 	font-weight: 500;
@@ -306,7 +354,6 @@ ul.navbar-nav {
     background: #FFFFFF;
     box-shadow: 0px 0px 60px rgba(22, 41, 85, 0.08);
     border-radius: 25px;
-    margin: 0 15px 40px;
     padding: 0 30px;
 }
 .view-button {
@@ -318,25 +365,42 @@ ul.navbar-nav {
 	padding: 10px 15px;
 }
 .table>tbody>tr>td{
-	border-top: 0px solid transparent !important;
+	border-top: 1px solid transparent !important;
 	border-bottom-width: 0;
 	padding-left: 40px;
+	font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #162955;
 }
-.requests-section .table>thead>tr{
+.table>tbody>tr>td:nth-child(1){
+	font-weight: 700;
+}
+.table>thead>tr{
 	background: #F5F9FF;
 	border: 1px solid #D7DDEA;
 	border-radius: 10px;
-
 }
-.requests-section .table>thead>tr>th{
+.requests-section .table>thead>tr>th,
+.project-planner-table .table>thead>tr>th{
 	padding: 24px 40px;
-    border-bottom: 0px solid transparent;
+	font-family: 'Satoshi';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 32px;
+	color: #162955;
+}
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: #D7DDEA !important;
 }
 .btn:active:focus, .btn:focus{
 	outline: none !important;
 }
 .request-contant {
-    padding: 44px 0 39px;
+    padding: 44px 0 32px;
 }
 .request-title h2 {
     font-family: 'Satoshi';
@@ -347,26 +411,31 @@ ul.navbar-nav {
     color: #162955;
     margin: 0;
 }
-.requests-section button.btn{
+.requests-section button.btn,
+.project-planner-table button.btn{
 	font-family: 'Satoshi';
 	font-style: normal;
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 24px;
 	border-radius: 5px;
-	width: 100%;
     max-width: 90px;
-    padding: 2px 0;
+    width: 100%;
+    padding: 0;
 }
-.requests-section button.btn.verified {
+.requests-section button.btn.verified,
+.project-planner-table button.btn.verified,
+.project-planner-table button.btn.green-pending{
 	color: #52A274;
 	background: #DFEEE7; 
 }
-.requests-section button.btn.pending {
+.requests-section button.btn.pending,
+.project-planner-table button.btn.pending{
     color: #A09A25;
     background: #FEF6CF;
 }
-.requests-section button.btn.unverified {
+.requests-section button.btn.unverified,
+.project-planner-table button.btn.unverified{
     color: #CD6767;
     background: #FBDCDC;
 }
@@ -430,6 +499,32 @@ footer span, footer span a{
     line-height: 14px;
     font-family: 'Satoshi';
 }
+/*media screen css(home page) start*/
+@media screen and (max-width:1024px){
+	.repair-cost-section .card-body h5{
+		font-size: 22px;
+	}
+}
+ @media screen and (max-width:576px){
+ 	.view-button {
+    width: 100%;
+    justify-content: start;
+	}
+	.request-contant {
+	    padding: 25px;
+	    gap: 15px;
+	}
+	.requests-section .button-primary {
+	    width: 100%;
+	}
+	.request-title h2 {
+	    text-align: center;
+	}
+	.repair-cost-section {
+    	padding-top: 20px;
+	}
+ }
+/*media screen css(home page) start*/
 
 
 
@@ -461,7 +556,8 @@ footer span, footer span a{
     font-family: 'Satoshi';
     margin: 0 0 15px;
 }
-.service-section input, .service-section select{
+.service-section input, .service-section select,
+.modal-body select,.modal-body input{
     border: 1px solid #BDC2CC;
     border-radius: 50px;
     padding: 20px 38px;
@@ -474,30 +570,45 @@ footer span, footer span a{
     box-shadow: none !important;
     margin: 0 0 30px;
 }
-.service-section input:focus, .service-section select:focus, .service-section textarea:focus{
+.modal-body select{
+	color: #67728C;
+}
+.service-section input:focus, .service-section select:focus, .service-section textarea:focus,
+.main-modal-dialog input:focus, ..main-modal-dialog select:focus, ..main-modal-dialog textarea:focus{	
     border-color: #BDC2CC;
 }
-.service-section input::-webkit-input-placeholder {
+.service-section input::-webkit-input-placeholder,
+.main-modal-dialog input::-webkit-input-placeholder,
+.main-modal-dialog textarea::-webkit-input-placeholder{
     color: #67728C;
 }
-.service-section input::-moz-placeholder {
+.service-section input::-moz-placeholder,
+.main-modal-dialog input::-moz-placeholder,
+.main-modal-dialog textarea::-moz-placeholder{
     color: #67728C;
 }
-.service-section input:-ms-input-placeholder {
+.service-section input:-ms-input-placeholder,
+.main-modal-dialog input:-ms-input-placeholder,
+.main-modal-dialog textarea:-ms-input-placeholder{
     color: #67728C;
 }
-.service-section input:-moz-placeholder {
+.service-section input:-moz-placeholder,
+.main-modal-dialog input:-moz-placeholder,
+.main-modal-dialog textarea:-moz-placeholder{
     color: #67728C;
 }
 
-.service-section input[type="file"]{
+.service-section input[type="file"],
+.main-modal-dialog input[type="file"]{
     padding: 10px 11px;
     text-align: left;
 }
-.service-section input[type="file"]::-webkit-file-upload-button {
+.service-section input[type="file"]::-webkit-file-upload-button,
+.main-modal-dialog input[type="file"]::-webkit-file-upload-button {
     visibility: hidden;
 }
-.service-section input[type="file"]::before {
+.service-section input[type="file"]::before,
+.main-modal-dialog input[type="file"]::before {
     content: 'Choose Files';
     display: inline-block;
     background: #162955;
@@ -519,15 +630,18 @@ footer span, footer span a{
     color: #FFFFFF;
     border: 1px solid #162955;
 }
-.service-section input[type="file"]:hover::before {
+.service-section input[type="file"]:hover::before,
+.main-modal-dialog input[type="file"]:hover::before {
     border-color: black;
 }
-.service-section input[type="file"]:active::before {
+.service-section input[type="file"]:active::before,
+.main-modal-dialog input[type="file"]:active::before {
     background: #fff;
     color: #162955;
 }
 
-.service-section textarea{
+.service-section textarea,
+.main-modal-dialog textarea{
     border: 1px solid #BDC2CC;
     border-radius: 30px;
     padding: 20px 38px;
@@ -542,7 +656,13 @@ footer span, footer span a{
     box-shadow: none !important;
     height: 200px;
 }
-.button-primary{
+.main-modal-dialog textarea{
+	margin: 0;
+	height: 138px;
+}
+.button-primary,
+.modal-footer .btn-primary,
+.modal-footer .btn-secondary{
     border: 2px solid #162955;
     background: #162955;
     border-radius: 50px;
@@ -558,7 +678,8 @@ footer span, footer span a{
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
-.button-primary:hover{
+.button-primary:hover,
+.modal-footer .btn-primary:hover{
     background: #fff;
     color: #162955;
 }
@@ -571,6 +692,160 @@ footer span, footer span a{
 /* New Service Request End */
 
 
+
+/* Project Planner start */
+
+.planner-main-menu ul.navbar-nav {
+    gap: 10px;
+}
+.project-planner-section .container{
+	width: 100%;
+	max-width: 1890px;
+	padding: 0 15px;
+	display: block;
+	margin: 0 auto;
+}
+.project-planner-contant {
+    padding: 27px 0;
+}
+.project-planner-section .planner-contant{
+	gap: 13px;
+}
+.project-planner-section .planner-contant h2 {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 51px;
+    text-align: center;
+    color: #162955;
+} 
+.project-planner-section button.add-icon {
+    border: 1px solid #B5BFD5;
+    padding: 11px;
+    background: transparent;
+    border-radius: 50%;
+}
+.project-planner-section .location select{
+	margin: 0;
+	padding: 15px 28px;
+}
+.project-planner-section .amount-contant{
+	padding-right: 15px;
+}
+.project-planner-section .amount-contant p {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: right;
+    color: #162955;
+    margin: 0;
+}
+
+.project-planner-table {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 60px rgba(22, 41, 85, 0.08);
+    border-radius: 25px;
+    padding: 44px 30px 46px;
+    margin-bottom: 40px;
+}
+.project-planner-table .table>tbody>tr>td{
+	padding-left: 8px;
+}
+.project-planner-table .table>thead>tr>th{
+	padding: 24px 20px;
+}
+.project-planner-table .pagination{
+    margin-bottom: 0;
+}
+ul.pagination-list {
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+li.page-number {
+    list-style: none;
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #162955;
+}
+li.page-number.active {
+    background: #03294E;
+    padding: 10px 19px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+/*modal css*/
+.modal-content {
+    background: #FFFFFF;
+    border-radius: 20px !important;
+    border: 0px solid transparent;
+}
+.modal-content .modal-header{
+    border: 0px solid transparent;
+    padding: 0 0 26px;
+}
+.main-modal-dialog .modal-header .close {
+    right: 42px;
+    position: absolute;
+    color: black;
+    background: transparent;
+    border-radius: 0;
+    border: 0px solid transparent;
+}
+
+h5.modal-title{
+	font-family: 'Satoshi';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 30px;
+	text-align: center;
+	color: #162955;
+}
+.modal-body select,
+.modal-body input{
+	padding: 19px 30px;
+	margin: 0;
+}
+.modal-content .modal-body{
+    padding: 0;
+}
+.modal-dialog {
+    width: 100% !important;
+    max-width: 700px;
+}
+.modal-content {
+	padding: 34px 40px 29px;
+    height: 600px;
+}
+.upload-file input{
+    height: 65px;
+}
+.modal-footer .btn-secondary{
+	border: 1px solid #D7DDEA;
+	background-color: #fff;
+	color: #162955 !important;
+}
+.modal-footer .btn-secondary:hover {
+    background-color: #162955;
+    color: #fff !important;
+}
+.modal-footer .btn-primary,
+.modal-footer .btn-secondary{
+	padding: 16px 0;
+}
+.modal-footer .row{
+    margin: 0 -12px;
+}
+
+/* Project Planner End */
 
 
 
@@ -652,7 +927,6 @@ footer span, footer span a{
         left: 0;
         right: 0;
         background: #162955;
-        z-index: 1;
     }
     .navbar-collapse  ul{
         padding: 30px 15px;

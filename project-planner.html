@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Project Planner</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!---header start--->
+	<header style="padding: 0 12px;">
+		<div class="row">
+			<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			  <div class="container-fluid">
+			    <a class="navbar-logo" href="#">
+			    	<img src="image/logo-all.png">
+			    </a>
+			    
+			    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+			      <ul class="navbar-nav">
+			        <li class="nav-item">
+			          <a class="nav-link" aria-current="page" href="#">Home</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#">New Service Request</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#">Jobs</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#">Customers</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#">Pay Requests</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#">Vendor Management</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#">Vendor Request Queue</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#">Vendor Search</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#">Admin</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#">Reports</a>
+			        </li>
+			      </ul>
+			    </div>
+			    <div class="nav-icon d-flex align-items-center">
+			    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				      <span class="navbar-toggler-icon"></span>
+				    </button>
+				    <a href="#" class="navbar-icon">
+						<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M22.75 27.4375H5.25C4.00731 27.4358 2.81598 26.9415 1.93726 26.0627C1.05854 25.184 0.564154 23.9927 0.5625 22.75V7.75C0.564154 6.50731 1.05854 5.31598 1.93726 4.43726C2.81598 3.55854 4.00731 3.06415 5.25 3.0625H22.75C23.9927 3.06415 25.184 3.55854 26.0627 4.43726C26.9415 5.31598 27.4358 6.50731 27.4375 7.75V22.75C27.4358 23.9927 26.9415 25.184 26.0627 26.0627C25.184 26.9415 23.9927 27.4358 22.75 27.4375ZM5.25 4.9375C4.50438 4.93849 3.78959 5.23513 3.26236 5.76236C2.73513 6.28959 2.43849 7.00438 2.4375 7.75V22.75C2.43849 23.4956 2.73513 24.2104 3.26236 24.7376C3.78959 25.2649 4.50438 25.5615 5.25 25.5625H22.75C23.4956 25.5615 24.2104 25.2649 24.7376 24.7376C25.2649 24.2104 25.5615 23.4956 25.5625 22.75V7.75C25.5615 7.00438 25.2649 6.28959 24.7376 5.76236C24.2104 5.23513 23.4956 4.93849 22.75 4.9375H5.25Z" fill="#162955"/>
+						<path d="M26.5 11.1875H1.5C1.25136 11.1875 1.0129 11.0887 0.837087 10.9129C0.661272 10.7371 0.5625 10.4986 0.5625 10.25V7.75C0.564154 6.50731 1.05854 5.31598 1.93726 4.43726C2.81598 3.55854 4.00731 3.06415 5.25 3.0625H22.75C23.9927 3.06415 25.184 3.55854 26.0627 4.43726C26.9415 5.31598 27.4358 6.50731 27.4375 7.75V10.25C27.4375 10.4986 27.3387 10.7371 27.1629 10.9129C26.9871 11.0887 26.7486 11.1875 26.5 11.1875ZM2.4375 9.3125H25.5625V7.75C25.5615 7.00438 25.2649 6.28959 24.7376 5.76236C24.2104 5.23513 23.4956 4.93849 22.75 4.9375H5.25C4.50438 4.93849 3.78959 5.23513 3.26236 5.76236C2.73513 6.28959 2.43849 7.00438 2.4375 7.75V9.3125Z" fill="#162955"/>
+						<path d="M19 7.4375C18.7514 7.4375 18.5129 7.33873 18.3371 7.16291C18.1613 6.9871 18.0625 6.74864 18.0625 6.5V1.5C18.0625 1.25136 18.1613 1.0129 18.3371 0.837087C18.5129 0.661272 18.7514 0.5625 19 0.5625C19.2486 0.5625 19.4871 0.661272 19.6629 0.837087C19.8387 1.0129 19.9375 1.25136 19.9375 1.5V6.5C19.9375 6.74864 19.8387 6.9871 19.6629 7.16291C19.4871 7.33873 19.2486 7.4375 19 7.4375Z" fill="#162955"/>
+						<path d="M9 7.4375C8.75136 7.4375 8.5129 7.33873 8.33709 7.16291C8.16127 6.9871 8.0625 6.74864 8.0625 6.5V1.5C8.0625 1.25136 8.16127 1.0129 8.33709 0.837087C8.5129 0.661272 8.75136 0.5625 9 0.5625C9.24864 0.5625 9.4871 0.661272 9.66291 0.837087C9.83873 1.0129 9.9375 1.25136 9.9375 1.5V6.5C9.9375 6.74864 9.83873 6.9871 9.66291 7.16291C9.4871 7.33873 9.24864 7.4375 9 7.4375Z" fill="#162955"/>
+						<path d="M1.5 10.25V21.5C1.5 22.8261 2.02678 24.0979 2.96447 25.0355C3.90215 25.9732 5.17392 26.5 6.5 26.5H21.5C22.8261 26.5 24.0979 25.9732 25.0355 25.0355C25.9732 24.0979 26.5 22.8261 26.5 21.5V10.25H1.5ZM6.5 21.5C6.25277 21.5 6.0111 21.4267 5.80554 21.2893C5.59998 21.152 5.43976 20.9568 5.34515 20.7284C5.25054 20.4999 5.22579 20.2486 5.27402 20.0061C5.32225 19.7637 5.4413 19.5409 5.61612 19.3661C5.79093 19.1913 6.01366 19.0722 6.25614 19.024C6.49861 18.9758 6.74995 19.0005 6.97835 19.0951C7.20676 19.1898 7.40199 19.35 7.53934 19.5555C7.67669 19.7611 7.75 20.0028 7.75 20.25C7.75 20.5815 7.6183 20.8995 7.38388 21.1339C7.14946 21.3683 6.83152 21.5 6.5 21.5ZM6.5 16.5C6.25277 16.5 6.0111 16.4267 5.80554 16.2893C5.59998 16.152 5.43976 15.9568 5.34515 15.7284C5.25054 15.4999 5.22579 15.2486 5.27402 15.0061C5.32225 14.7637 5.4413 14.5409 5.61612 14.3661C5.79093 14.1913 6.01366 14.0722 6.25614 14.024C6.49861 13.9758 6.74995 14.0005 6.97835 14.0952C7.20676 14.1898 7.40199 14.35 7.53934 14.5555C7.67669 14.7611 7.75 15.0028 7.75 15.25C7.75 15.5815 7.6183 15.8995 7.38388 16.1339C7.14946 16.3683 6.83152 16.5 6.5 16.5ZM11.5 21.5C11.2528 21.5 11.0111 21.4267 10.8055 21.2893C10.6 21.152 10.4398 20.9568 10.3451 20.7284C10.2505 20.4999 10.2258 20.2486 10.274 20.0061C10.3222 19.7637 10.4413 19.5409 10.6161 19.3661C10.7909 19.1913 11.0137 19.0722 11.2561 19.024C11.4986 18.9758 11.7499 19.0005 11.9784 19.0951C12.2068 19.1898 12.402 19.35 12.5393 19.5555C12.6767 19.7611 12.75 20.0028 12.75 20.25C12.75 20.5815 12.6183 20.8995 12.3839 21.1339C12.1495 21.3683 11.8315 21.5 11.5 21.5ZM11.5 16.5C11.2528 16.5 11.0111 16.4267 10.8055 16.2893C10.6 16.152 10.4398 15.9568 10.3451 15.7284C10.2505 15.4999 10.2258 15.2486 10.274 15.0061C10.3222 14.7637 10.4413 14.5409 10.6161 14.3661C10.7909 14.1913 11.0137 14.0722 11.2561 14.024C11.4986 13.9758 11.7499 14.0005 11.9784 14.0952C12.2068 14.1898 12.402 14.35 12.5393 14.5555C12.6767 14.7611 12.75 15.0028 12.75 15.25C12.75 15.5815 12.6183 15.8995 12.3839 16.1339C12.1495 16.3683 11.8315 16.5 11.5 16.5ZM16.5 21.5C16.2528 21.5 16.0111 21.4267 15.8055 21.2893C15.6 21.152 15.4398 20.9568 15.3451 20.7284C15.2505 20.4999 15.2258 20.2486 15.274 20.0061C15.3222 19.7637 15.4413 19.5409 15.6161 19.3661C15.7909 19.1913 16.0137 19.0722 16.2561 19.024C16.4986 18.9758 16.7499 19.0005 16.9784 19.0951C17.2068 19.1898 17.402 19.35 17.5393 19.5555C17.6767 19.7611 17.75 20.0028 17.75 20.25C17.75 20.5815 17.6183 20.8995 17.3839 21.1339C17.1495 21.3683 16.8315 21.5 16.5 21.5ZM16.5 16.5C16.2528 16.5 16.0111 16.4267 15.8055 16.2893C15.6 16.152 15.4398 15.9568 15.3451 15.7284C15.2505 15.4999 15.2258 15.2486 15.274 15.0061C15.3222 14.7637 15.4413 14.5409 15.6161 14.3661C15.7909 14.1913 16.0137 14.0722 16.2561 14.024C16.4986 13.9758 16.7499 14.0005 16.9784 14.0952C17.2068 14.1898 17.402 14.35 17.5393 14.5555C17.6767 14.7611 17.75 15.0028 17.75 15.25C17.75 15.5815 17.6183 15.8995 17.3839 16.1339C17.1495 16.3683 16.8315 16.5 16.5 16.5ZM21.5 21.5C21.2528 21.5 21.0111 21.4267 20.8055 21.2893C20.6 21.152 20.4398 20.9568 20.3451 20.7284C20.2505 20.4999 20.2258 20.2486 20.274 20.0061C20.3223 19.7637 20.4413 19.5409 20.6161 19.3661C20.7909 19.1913 21.0137 19.0722 21.2561 19.024C21.4986 18.9758 21.7499 19.0005 21.9784 19.0951C22.2068 19.1898 22.402 19.35 22.5393 19.5555C22.6767 19.7611 22.75 20.0028 22.75 20.25C22.75 20.5815 22.6183 20.8995 22.3839 21.1339C22.1495 21.3683 21.8315 21.5 21.5 21.5ZM21.5 16.5C21.2528 16.5 21.0111 16.4267 20.8055 16.2893C20.6 16.152 20.4398 15.9568 20.3451 15.7284C20.2505 15.4999 20.2258 15.2486 20.274 15.0061C20.3223 14.7637 20.4413 14.5409 20.6161 14.3661C20.7909 14.1913 21.0137 14.0722 21.2561 14.024C21.4986 13.9758 21.7499 14.0005 21.9784 14.0952C22.2068 14.1898 22.402 14.35 22.5393 14.5555C22.6767 14.7611 22.75 15.0028 22.75 15.25C22.75 15.5815 22.6183 15.8995 22.3839 16.1339C22.1495 16.3683 21.8315 16.5 21.5 16.5Z" fill="#162955"/>
+						</svg>
+				    </a>
+			    	<a class="navbar-icon" href="#">
+						<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M29.7357 5.96021L20.6373 15L29.7357 24.0398C29.9002 23.696 30 23.316 30 22.9101V7.08983C30 6.68396 29.9002 6.30397 29.7357 5.96021Z" fill="#162955"/>
+						<path d="M27.3633 4.45312H2.63671C2.23083 4.45312 1.85085 4.55291 1.50708 4.71738L13.1358 16.2875C14.164 17.3157 15.836 17.3157 16.8642 16.2875L28.4929 4.71738C28.1491 4.55291 27.7691 4.45312 27.3633 4.45312Z" fill="#162955"/>
+						<path d="M0.264258 5.96021C0.0997852 6.30397 0 6.68396 0 7.08983V22.9101C0 23.316 0.0997852 23.6961 0.264258 24.0398L9.36264 15L0.264258 5.96021Z" fill="#162955"/>
+						<path d="M19.3945 16.2429L18.107 17.5303C16.3938 19.2436 13.6061 19.2436 11.8929 17.5303L10.6055 16.2429L1.50708 25.2826C1.85085 25.4471 2.23083 25.5469 2.63671 25.5469H27.3633C27.7691 25.5469 28.1491 25.4471 28.4929 25.2826L19.3945 16.2429Z" fill="#162955"/>
+						</svg>
+				    </a>
+				    <a class="navbar-icon" href="#">	
+						<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0_11_1430)">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.72656 0 0 6.72656 0 15C0 23.2734 6.72656 30 15 30C23.2734 30 30 23.2734 30 15C30 6.72656 23.2734 0 15 0Z" fill="#F34235"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M21.4453 16.084C21.4453 19.6406 18.5508 22.5293 15 22.5293C11.4434 22.5293 8.55469 19.6348 8.55469 16.084C8.55469 13.8926 9.65039 11.8711 11.4902 10.6816C11.9238 10.4004 12.5039 10.5234 12.7852 10.957C13.0664 11.3906 12.9434 11.9707 12.5098 12.252C11.2031 13.0957 10.4297 14.5312 10.4297 16.084C10.4297 18.6035 12.4805 20.6543 15 20.6543C17.5195 20.6543 19.5703 18.6035 19.5703 16.084C19.5703 14.5312 18.791 13.0957 17.4902 12.252C17.0566 11.9707 16.9336 11.3906 17.2148 10.957C17.4961 10.5234 18.0762 10.4004 18.5098 10.6816C20.3496 11.8711 21.4453 13.8926 21.4453 16.084ZM14.0625 12.7383V8.4082C14.0625 7.89258 14.4844 7.4707 15 7.4707C15.5156 7.4707 15.9375 7.89258 15.9375 8.4082V12.7383C15.9375 13.2539 15.5156 13.6758 15 13.6758C14.4844 13.6758 14.0625 13.2539 14.0625 12.7383Z" fill="white"/>
+						</g>
+						<defs>
+						<clipPath id="clip0_11_1430">
+						<rect width="30" height="30" fill="white"/>
+						</clipPath>
+						</defs>
+						</svg>
+				    </a>
+			    </div>
+			  </div>
+			</nav>
+		</div>
+	</header>
+<!---header end--->
+
+<!--project-planner-section start-->
+<section class="project-planner-section">
+	<div class="container">
+		<div class="row">
+			<div class="project-planner-contant d-flex align-items-center justify-content-between">
+				<div class="planner-contant col-6 d-flex align-items-center">
+					<h2>Project Planner</h2>
+					<button class="add-icon d-flex align-items-center" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_11_1459)">
+							<path d="M1.875 8.75H8.75V1.875C8.75 1.18469 9.30969 0.625 10 0.625C10.6903 0.625 11.25 1.18469 11.25 1.875V8.75H18.125C18.8153 8.75 19.375 9.30969 19.375 10C19.375 10.6903 18.8153 11.25 18.125 11.25H11.25V18.125C11.25 18.8153 10.6903 19.375 10 19.375C9.30969 19.375 8.75 18.8153 8.75 18.125V11.25H1.875C1.18469 11.25 0.625 10.6903 0.625 10C0.625 9.30969 1.18469 8.75 1.875 8.75Z" fill="#162955"/>
+							</g>
+							<defs>
+							<clipPath id="clip0_11_1459">
+							<rect width="20" height="20" fill="white" transform="matrix(-1 0 0 1 20 0)"/>
+							</clipPath>
+							</defs>
+						</svg>
+					</button>
+					<!-- Modal -->
+						<div class="main-modal-dialog modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header justify-content-start">
+						        	<h5 class="modal-title" id="exampleModalLongTitle">New Proposal</h5>
+							        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+							          <span aria-hidden="true">
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M9.46585 7.98692L15.6959 14.2172C16.1014 14.6224 16.1014 15.2777 15.6959 15.6829C15.2907 16.0882 14.6354 16.0882 14.2302 15.6829L7.99991 9.45267L1.76983 15.6829C1.36438 16.0882 0.709336 16.0882 0.304082 15.6829C-0.101361 15.2777 -0.101361 14.6224 0.304082 14.2172L6.53416 7.98692L0.304082 1.75665C-0.101361 1.35139 -0.101361 0.696156 0.304082 0.290902C0.506045 0.0887499 0.771595 -0.0128002 1.03695 -0.0128002C1.30232 -0.0128002 1.56768 0.0887499 1.76983 0.290902L7.99991 6.52117L14.2302 0.290902C14.4323 0.0887499 14.6977 -0.0128002 14.9631 -0.0128002C15.2284 -0.0128002 15.4938 0.0887499 15.6959 0.290902C16.1014 0.696156 16.1014 1.35139 15.6959 1.75665L9.46585 7.98692Z" fill="black"/>
+										</svg>
+							          </span>
+							        </button>
+						      </div>
+						      <div class="modal-body">
+						        <div class="mb-3">
+						            <select class="form-select" aria-label="Default select example">
+						              <option selected>Select a Location</option>
+						              <option value="1">Sprinkles Cupcakes One</option>
+						              <option value="2">Sprinkles Cupcakes Two</option>
+						              <option value="3">Sprinkles Cupcakes Three</option>
+						            </select>
+						        </div>
+						        <div class="mb-3">
+						        	<input class="w-100 d-inline-block" type="text" placeholder="Add Name here">
+						        </div>
+						        <div class="upload-file mb-3">
+    								<input class="w-100 d-inline-block form-control form-control-sm" type="file" 
+    								id="formFileSm" >
+								</div>
+								<div class="form-floating">
+								  <textarea class="w-100" placeholder="Type Something"></textarea>
+							   </div>
+						      </div>
+						      
+						      <div class="modal-footer w-100 d-inline-block p-0 border-0" >
+						      	<div class="row">
+						        <div class="col-12 col-sm-6 d-flex">
+						        	<button type="button" class="btn w-100 text-center btn-secondary col-6 close-button" data-dismiss="modal">Close</button>
+						        </div>
+						        <div class="col-12 col-sm-6 d-flex">
+							        <button type="button" class="btn w-100 text-center btn-primary col-6 create-button">Create Project</button>
+						        </div>
+						    </div>
+						      </div>
+
+						    </div>
+						  </div>
+						</div>
+				<!-- Modal end-->
+				
+				</div>
+				<div class="location-contant col-6 d-flex align-items-center justify-content-end">
+					<div class="location col-4">
+						<select class="form-select" aria-label="Default select example">
+						  <option selected>All Location</option>
+						  <option value="1">One</option>
+						  <option value="2">Two</option>
+						  <option value="3">Three</option>
+						</select>
+					</div>
+					<div class="amount-contant col-4">
+						<p>Total Projects : 01</p>
+						<p>Total Amount : $49,200.00</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="project-planner-table">
+			<div class="table-responsive row">
+				<table class="table">
+				  <thead>
+				    <tr>
+				      <th scope="col">Name</th>
+				      <th scope="col">Location</th>
+				      <th scope="col">Budget</th>
+				      <th scope="col">Status</th>
+				      <th scope="col">Created Date</th>
+				      <th scope="col"></th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>ER: Sprinkles Cupcakes - VILLANOVA - Damaged wood</td>
+				      <td>Sprinkles Cupcakes - VILLANOVA</td>
+				      <td>$49,200.00</td>
+				      <td><button type="button" class="btn verified">Verified</button></td>
+				      <td class="px-5">18/07/21</td>
+				      <td>
+				      	<a href="#"><img src="image/pencil-1.svg"></a>
+				      </td>
+				    </tr>
+				    <tr>
+				      <td>Pippa Rachel</td>
+				      <td>Lorem Dummy</td>
+				      <td>$49,200.00</td>
+				      <td><button type="button" class="btn pending">Pending</button></td>
+				      <td class="px-5">18/07/21</td>
+				      <td>
+				      	<a href="#"><img src="image/pencil-1.svg"></a>
+				      </td>
+				    </tr>
+				    <tr>
+				      <td>Una Vanessa</td>
+				      <td>Lorem Ipsum Dummy Text</td>
+				      <td>$49,200.00</td>
+				      <td><button type="button" class="btn green-pending">Pending</button></td>
+				      <td class="px-5">18/07/21</td>
+				      <td>
+				      	<a href="#"><img src="image/pencil-1.svg"></a>
+				      </td>
+				    </tr>
+				    <tr>
+				      <td>Dan David</td>
+				      <td>Lorem Ipsum</td>
+				      <td>$49,200.00</td>
+				      <td><button type="button" class="btn unverified">Unverifed</button></td>
+				      <td class="px-5">18/07/21</td>
+				      <td>
+				      	<a href="#"><img src="image/pencil-1.svg"></a>
+				      </td>
+				    </tr>
+				    <tr>
+				      <td>Joe John</td>
+				      <td>Dummy Lorem Ipsum</td>
+				      <td>$49,200.00</td>
+				      <td><button type="button" class="btn green-pending">Pending</button></td>
+				      <td class="px-5">18/07/21</td>
+				      <td>
+				      	<a href="#"><img src="image/pencil-1.svg"></a>
+				      </td>
+				    </tr>
+				    <tr>
+				      <td>Carry Chapman</td>
+				      <td>Lorem Dummy</td>
+				      <td>$49,200.00</td>
+				      <td><button type="button" class="btn pending">Pending</button></td>
+				      <td class="px-5">18/07/21</td>
+				      <td>
+				      	<a href="#"><img src="image/pencil-1.svg"></a>
+				      </td>
+				    </tr>
+				    <tr>
+				      <td>Kelly Kerr</td>
+				      <td>Dummy Text</td>
+				      <td>$49,200.00</td>
+				      <td><button type="button" class="btn green-pending">Pending</button></td>
+				      <td class="px-5">18/07/21</td>
+				      <td>
+				      	<a href="#"><img src="image/pencil-1.svg"></a>
+				      </td>
+				    </tr>
+				    <tr>
+				      <td>Carry Chapman</td>
+				      <td>Lorem Dummy</td>
+				      <td>$49,200.00</td>
+				      <td><button type="button" class="btn pending">Pending</button></td>
+				      <td class="px-5">18/07/21</td>
+				      <td>
+				      	<a href="#"><img src="image/pencil-1.svg"></a>
+				      </td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+			<div class="pagination row">
+				<ul class="pagination-list d-flex align-items-center">
+					<li class="page-number active">1</li>
+					<li class="page-number">2</li>
+					<li class="page-number">3</li>
+					<li class="page-number">4</li>
+					<li class="page-number pb-2">
+						<img src="image/right-icon.svg">
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<!--project-planner-section end-->
+
+<!---footer start--->
+<footer>
+    	<div class="container-fluid">
+    		<div class="row">
+    			<div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+    				<ul class="footer-menu p-0 m-0 d-flex">
+    					<li><a href="#">About us</a></li>
+    					<li><a href="#">Contact us</a></li>
+    				</ul>
+    				<span class="col-12 col-sm-6 pt-3 text-sm-end pt-sm-0">Logged in : <a href="mailto:rwilliams@allprocstx.com">rwilliams@allprocstx.com</a> @ 17/03/2023 08:10AM</span>
+    			</div>
+    		</div>
+    	</div>
+    </footer>
+    <!---footer end--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
