@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home Page</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!---header start--->
@@ -74,24 +74,20 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-12 col-md-4 col-xl-5">
-				<select class="form-select" aria-label="Default select example">
+			<div class="col-12 d-flex mb-4 flex-md-nowrap flex-wrap justify-content-between">
+				<select class="form-select mb-3 mb-md-0 me-4" aria-label="Default select example">
 				  <option selected>Select a Customer</option>
 				  <option value="1">One</option>
 				  <option value="2">Two</option>
 				  <option value="3">Three</option>
 				</select>
-			</div>
-			<div class="col-12 col-md-4 col-xl-5">
-				<select class="form-select" aria-label="Default select example">
-				  <option selected>Select a Location</option>
-				  <option value="1">One</option>
-				  <option value="2">Two</option>
-				  <option value="3">Three</option>
-				</select>
-			</div>
-			<div class="col-12 col-md-4 col-xl-2">
-				<button type="submit" class="button-primary">Update</button>
+				<select class="form-select mb-3 mb-md-0 me-4" aria-label="Default select example">
+					<option selected>Select a Location</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				  </select>
+				  <button type="submit" class="button-primary">Update</button>
 			</div>
 		</div>
 	</div>
@@ -250,18 +246,18 @@
 		  <!-- View Categories by MTD Start -->
 		  <div class="tab-pane fade" id="Categories" role="tabpanel" aria-labelledby="Categories-tab">
 		  	<div class="view-categories d-flex flex-wrap">
-		  		<div class="view-info d-flex align-items-center col-12 col-md-4 col-xl-2">
-		  			<label class="w-75 d-inline-block">Viewable Info :</label>
-	    				<select class="form-select" aria-label="Default select example">
-						  <option selected>Category</option>
-						  <option value="1">Category One</option>
-						  <option value="2">Category Two</option>
-						  <option value="3">Category Three</option>
-						</select>
+		  		<div class="view-info d-flex align-items-center justify-content-start col-12 col-md-4 col-xl-3">
+		  			<label class="d-inline-block me-4">Viewable Info :</label>
+					<select class="form-select w-50" aria-label="Default select example">
+						<option selected>Category</option>
+						<option value="1">Category One</option>
+						<option value="2">Category Two</option>
+						<option value="3">Category Three</option>
+					</select>
 		  		</div>
-		  		<div class="time-frame d-flex align-items-center col-12 col-md-4 col-xl-2">
-		  			<label class="w-75 d-inline-block">Time Frame :</label>
-	    				<select class="form-select" aria-label="Default select example">
+		  		<div class="time-frame d-flex align-items-center col-12 col-md-4 col-xl-3">
+		  			<label class="d-inline-block me-4">Time Frame :</label>
+	    				<select class="form-select w-50" aria-label="Default select example">
 						  <option selected>Month to date</option>
 						  <option value="1">date One</option>
 						  <option value="2">date Two</option>
